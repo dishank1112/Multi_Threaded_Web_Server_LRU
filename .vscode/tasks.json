@@ -1,0 +1,24 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "make",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Generated task by Makefile"
+        },
+        {
+            "label": "run",
+            "type": "shell",
+            "command": "proxyserver_with_cache.exe", // Adjust the name if your output binary has a different name
+            "group": "test",
+            "dependsOn": "build",
+            "problemMatcher": []
+        }
+    ]
+}
